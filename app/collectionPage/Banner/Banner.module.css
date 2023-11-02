@@ -3,6 +3,15 @@
 
 }
 
+.Banner{
+    /* height: 20vh; */
+}
+
+.Banner_img{
+    /* max-height: 20rem; */
+    /* display: block; */
+}
+
 
 @media screen and  (max-width:35em) {
     .Banner_img{
