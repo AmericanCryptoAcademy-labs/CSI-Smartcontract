@@ -29,7 +29,7 @@ export default function Home() {
     supportedWallets={[
       metamaskWallet()
     ]}
-    clientId="your-client-id">
+   >
     <ChakraProvider>
       <Navbar/>
       <Hero/>

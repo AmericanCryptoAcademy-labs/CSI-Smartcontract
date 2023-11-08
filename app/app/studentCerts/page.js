@@ -38,7 +38,8 @@ export const StudentCerts = () => {
             console.log('Reading tx--> ')
             console.log(tx)
             console.log( "NFT ARRAY -> " , nftArray)
-            setloading(false)
+            setloading(false);
+            console.log(tokenURI);
         }catch(error){
             console.log('FetchMyNFTs Function Error -> ' , error)
         }

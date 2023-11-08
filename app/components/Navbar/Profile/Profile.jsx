@@ -18,9 +18,18 @@ import images from "../../../img";
 import Style from "./profile.module.css"
 // import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { ConnectWallet } from "@thirdweb-dev/react";
+import {
+  ThirdwebProvider,
+  metamaskWallet
+} from "@thirdweb-dev/react";
 
 const Profile = () => {
   return (
+    <ThirdwebProvider 
+    supportedWallets={[
+      metamaskWallet()
+    ]}
+   >
 
     <div className={Style.PROFILE}>
 
@@ -92,7 +101,7 @@ const Profile = () => {
       </div>
     </div>
 
-  
+    </ThirdwebProvider>
   )
 }
 

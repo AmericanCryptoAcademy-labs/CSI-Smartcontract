@@ -16,7 +16,7 @@ const Service = () => {
                 <p>
                     <span>Step 1</span>
                 </p>               
-                <h3>Filter & Discover</h3>
+                <h3>Connect Wallet</h3>
                 <p>Connect with Wallet , discover , buy NFTs, sell your NFTs and earn money </p>
         </div>
 
@@ -25,7 +25,7 @@ const Service = () => {
                 <p>
                     <span>Step 2</span>
                 </p>               
-                <h3>Connect Wallet </h3>
+                <h3>Register</h3>
                 <p>Connect with Wallet , discover , buy NFTs, sell your NFTs and earn money </p>
         </div>
 

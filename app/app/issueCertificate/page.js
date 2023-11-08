@@ -41,9 +41,11 @@ const IssueCertificate = () => {
   const [showUploadAlert, setShowUploadAlert] = useState(false);
   const [showMintAlert, setShowMintAlert] = useState(false);
   const [showMetamaskAlert, setShowMetamaskAlert] = useState(false);
-  const [status,setstatus] = useState('')
+  const [status,setstatus] = useState('');
+  const [institute , setinstitute] = useState("")
   // defining  useRef for all inputes
   const fileRef = useRef(null);
+  const instituteRef = useRef(null)
 
   // upload image function
   const uploadImage = async (imageData) => {
@@ -55,7 +57,8 @@ const IssueCertificate = () => {
       image: new File([imageData], "image.jpeg", { type: "image/jpeg" }),
       name: name,
       description : remarks,
-      issuedTo : address
+      issuedTo : address,
+      institute : instituteRef.current.value,
     })
 
     // Save the URL
@@ -93,21 +96,21 @@ const IssueCertificate = () => {
     } catch (error) {
        console.log("mint nft handelr error ",error)
     }
-
   }
 
   // handle upload Function
   const handleUpload = async (event) => {
     try {
       event.preventDefault();
-    //   const files = fileRef.current.files[0];
-    //   console.log(files);
+      const files = fileRef.current.files[0];
+      console.log( "File", files);
       console.log(name, remarks, validity,useraddress ,fileRef);
 
-      if(name == "" || remarks == "" || validity == "" || useraddress == ""){
+      if(name == "" || remarks == "" || validity == "" || useraddress == "" , files == undefined){
         alert("Please Fill All The Details")       
-      }else{   
-      const ipnft = await uploadImage(images.cert1);
+      }else{
+        console.log(images.cert1);
+      const ipnft = await uploadImage(files);
       console.log(ipnft);
       await mintnfthandler(ipnft , useraddress , validity); 
 
@@ -217,9 +220,36 @@ const IssueCertificate = () => {
                       />
                     </FormControl>
 
+                    <FormControl >
+                      <Input
+                        required
+                        type={'file'}
+                          accept="image/*"
+                        multiple
+                        ref={fileRef}
+                        css={{
+                          '&::file-selector-button': {
+                            border: 'none',
+                            width: '100%',
+                            height: '100%',
+                            color: 'rgba(0, 0, 0, 0.53)',
+                            backgroundColor: '#fff',
+                            cursor: 'pointer',
+                            fontSize: '1rem',
+                            fontWeight: '700',
+                            overflow: 'hidden',
+                          },
+                        }}
+                      />
+                    </FormControl>
+
+
                     <FormControl style={{padding:'1rem' }}>
                     <Select placeholder='Select Certificate' size='lg' style={{padding:'0.4rem 3rem' , border:'2px solid #4c5773' , borderRadius:'1rem'}}  >
-                        <option value='option1'>American Crypto Academy</option>
+                        <option value="American Crypto Academy" ref={instituteRef}  >American Crypto Academy</option>
+                        <option value="Boston Univeristy" ref={instituteRef}  >Boston Univeristy</option>
+                        <option value="Harvard College" ref={instituteRef}  >Harvard College</option>
+
                     </Select>
                   
                     </FormControl>

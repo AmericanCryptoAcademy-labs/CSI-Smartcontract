@@ -15,11 +15,12 @@ const NFTTile = ({ tokenURI, proposalid ,validdate }) => {
   useEffect(() => {
     const fetchMetadata = async () => {
       try {
+        console.log(`Token URI ${tokenURI}`)
         const response = await fetch(`https://ipfs.io/ipfs/${tokenURI}/metadata.json`);
         console.log(response)
         const metadata = await response.json();
         // console.log(metadata.text())
-        setname(metadata.name)
+        setname(metadata.name);
         let tokenImagex = metadata.image;
         setimage(tokenImagex)
 
@@ -40,14 +41,12 @@ const NFTTile = ({ tokenURI, proposalid ,validdate }) => {
     return dateObject.toISOString().slice(0,19).replace("T", " ");
 }
 
-
   return (
     <div className="m-3" key={tokenURI} style={{padding:'0 0.6rem'}} >
     {tokenURI !== "" ? (
       <Link href={`/profile/${proposalid.toString()}`} maxw="30" key={proposalid.toString()} p={'1rem'} m={'1rem'} >
         <img
-          // src={`${image.replace('ipfs://', 'https://nftstorage.link/ipfs/')}`}
-          src={images.cert1}
+          src={`${image.replace('ipfs://', 'https://nftstorage.link/ipfs/')}`}
           className="w-11/12 mx-auto rounded-2xl"
           w={"100"}
           h={"80"}

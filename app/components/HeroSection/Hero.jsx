@@ -7,8 +7,6 @@ import Style from "./Hero.module.css"
 import Button from '../Button/Button'
 import images from "../../img"
 
-
-
 const Hero = () => {
   return (
     <div className={Style.HEROSECTION} >
@@ -16,11 +14,11 @@ const Hero = () => {
       <div className={Style.HEROSECTION_BOX}>
 
         <div className={Style.HEROSECTION_BOX_LEFT}>
-            <h1>Discover , Collect , and sell NFTs</h1>
+            <h1>Certificate Standard Institute</h1>
             <p>
-              Discover the most outstanding NFTs in all topics of your NFTs and trade them.
+              Discover the most outstanding Ceritificates Standards Services
             </p>
-            <Button btnName="Start your search"></Button>
+            <Button btnName="Explore"></Button>
         </div>
 
       <div className={Style.HEROSECTION_BOX_RIGHT}>
