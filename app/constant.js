@@ -1,20 +1,9 @@
-export const address = "0xf70CDa4F57890bbC0dF10476E77838598515caB2"
+export const address = "0x32999F8862941f9707e661343B371fE5ddbad555"
 
 
 export const abi =  [
   {
-    "inputs": [
-      {
-        "internalType": "string",
-        "name": "name",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "symbol",
-        "type": "string"
-      }
-    ],
+    "inputs": [],
     "stateMutability": "nonpayable",
     "type": "constructor"
   },
@@ -377,12 +366,12 @@ export const abi =  [
             "type": "uint256"
           },
           {
-            "internalType": "enum EasyCerts.CertificateStatus",
+            "internalType": "enum CSIContract.CertificateStatus",
             "name": "status",
             "type": "uint8"
           }
         ],
-        "internalType": "struct EasyCerts.Certificate[]",
+        "internalType": "struct CSIContract.Certificate[]",
         "name": "",
         "type": "tuple[]"
       }
@@ -433,12 +422,12 @@ export const abi =  [
             "type": "uint256"
           },
           {
-            "internalType": "enum EasyCerts.CertificateStatus",
+            "internalType": "enum CSIContract.CertificateStatus",
             "name": "status",
             "type": "uint8"
           }
         ],
-        "internalType": "struct EasyCerts.Certificate[]",
+        "internalType": "struct CSIContract.Certificate[]",
         "name": "",
         "type": "tuple[]"
       }
@@ -508,12 +497,12 @@ export const abi =  [
             "type": "uint256"
           },
           {
-            "internalType": "enum EasyCerts.CertificateStatus",
+            "internalType": "enum CSIContract.CertificateStatus",
             "name": "status",
             "type": "uint8"
           }
         ],
-        "internalType": "struct EasyCerts.Certificate",
+        "internalType": "struct CSIContract.Certificate",
         "name": "",
         "type": "tuple"
       }
@@ -532,7 +521,7 @@ export const abi =  [
     "name": "getCertificateStatus",
     "outputs": [
       {
-        "internalType": "enum EasyCerts.CertificateStatus",
+        "internalType": "enum CSIContract.CertificateStatus",
         "name": "",
         "type": "uint8"
       }
@@ -613,7 +602,7 @@ export const abi =  [
         "type": "uint256"
       },
       {
-        "internalType": "enum EasyCerts.CertificateStatus",
+        "internalType": "enum CSIContract.CertificateStatus",
         "name": "status",
         "type": "uint8"
       }
