@@ -14,8 +14,8 @@ module.exports = {
 
 
   networks:{
-    mumbai:{
-      url:"https://polygon-mumbai.g.alchemy.com/v2/3Af3ifbp_PQgFT-nPJBBQl-H2vFSxARj",
+    sepolia:{
+      url:"https://eth-sepolia.g.alchemy.com/v2/FT-SuD2nj7j-tRwR7-SyyG4udd6ntqDa",
       accounts:["edd0a374fb70992c742af5ff48618adf91eb6f97656be5ed122a6fc0ff3aed3e"],
       gas:'auto'
     }

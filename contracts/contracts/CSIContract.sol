@@ -8,17 +8,14 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
 
-contract EasyCerts is ERC721 , ERC721URIStorage ,Ownable , ReentrancyGuard{
+contract CSIContract is ERC721 , ERC721URIStorage ,Ownable , ReentrancyGuard{
 
     // using ECDSA for bytes32;
 
     using Counters for Counters.Counter;
     Counters.Counter private _certificatesIds;
 
-    // // signer address    
-    // address public immutable signer;
-
-    constructor(string memory name, string memory symbol) ERC721(name, symbol) {
+    constructor() ERC721("Certificate Standards Institute", "CSI") {
         isTeacher[msg.sender] = true;
     }
 
@@ -77,7 +74,6 @@ contract EasyCerts is ERC721 , ERC721URIStorage ,Ownable , ReentrancyGuard{
         }
     }
 
-
     function mintCertificate(address to , string memory tokenuri , uint256 daysTillValid) external nonReentrant{
         (bool isteacher) = onlyTeacher(msg.sender);
 
@@ -116,12 +112,12 @@ contract EasyCerts is ERC721 , ERC721URIStorage ,Ownable , ReentrancyGuard{
 
 
     // adding  teachers to mapping  
-    function addTeacher(address _address) external  {
+    function addTeacher(address _address) external onlyOwner {
         isTeacher[_address] = true;
     }
 
     // removing teacher from mapping
-    function removeTeacher(address _address)   external {
+    function removeTeacher(address _address)   external  onlyOwner{
         isTeacher[_address] = false;
     }
 
