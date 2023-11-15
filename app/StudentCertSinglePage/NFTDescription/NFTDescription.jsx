@@ -124,9 +124,9 @@ const NFTDescription = ({certId , name , description , issuedTo , institute , is
   }
 
   const certTypeReturn = (type) => {
-    if(certType == 1){
+    if(certType == 0){
       return "Active"
-    }else if (certType == 2){
+    }else if (certType == 1){
       return "Expired"
     }else{
       return "Revoked"
