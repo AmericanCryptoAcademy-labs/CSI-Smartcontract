@@ -9,7 +9,7 @@
     width: 80%;
     display: grid;
     grid-template-columns: 1fr 1.2fr;
-    gap: 5rem;
+    gap: 0rem;
 }
 
 @media screen and (max-width:35em){

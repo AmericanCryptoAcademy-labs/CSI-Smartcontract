@@ -140,7 +140,7 @@ const NFTDescription = ({certId , name , description , issuedTo , institute , is
       const provider = new ethers.providers.Web3Provider(window.ethereum)
       const signer = provider.getSigner()
       const aift = new ethers.Contract(address, abi, signer);
-      const tx = await aift.updateCertificateValidity(certId , date);
+      const tx = await aift.updateCertificateValidity(certId , Number(date));
       console.log(tx)
 
       const txhash = tx.hash 
@@ -324,7 +324,7 @@ const MyModal = ({isOpen, onClose, extendValiditybtn, setdate  }) => {
           alignItems="center"
           flexDirection={"column"}
           style={{ flexDirection: "column" }}
-          justifyContent="center"
+          justifyContent="center"ve
           zIndex="10000000000000000"
           onClick={onClose}
         >

@@ -72,7 +72,7 @@ const NFTDetailsImage = ({tokenURI ,tokenId , image , remark}) => {
           </div>
 
           <div className={Style.NFTDetailsImage_box_nft_img} >
-            <img  src={`${image.replace('ipfs://', 'https://nftstorage.link/ipfs/')}`} alt='nft image 2 ' className={Style.NFTDetailsImage_box_nft_img_img} width={500} height={800} objectFit='cover' /> 
+            <img  src={`${image.replace('ipfs://', 'https://nftstorage.link/ipfs/')}`} alt='nft image 2 ' className={Style.NFTDetailsImage_box_nft_img_img} width={400} height={800} objectFit='cover' /> 
 
           </div>
         </div>
