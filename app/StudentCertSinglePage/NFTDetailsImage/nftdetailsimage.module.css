@@ -1,0 +1,108 @@
+.NFTDetailsImage{
+    width: 100%;
+
+}
+
+.NFTDetailsImage_box{
+    grid-column: 1/-1 ;
+    grid-row: 1 / -1;
+}
+
+.NFTDetailsImage_box_nft_like{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column:  1 / -1;
+    grid-row: 1 / end;
+    z-index: 11111;
+    align-self: flex-start;
+    padding-inline: 2rem;
+    position: relative;
+    top: 4rem;
+}
+
+
+.NFTDetailsImage_box_nft_like p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: rgba(0,0,0,.5);
+    padding: 0.3rem 0.8rem;
+    border-radius: 2rem;
+    color: #fff;
+    z-index: 2222222222;
+
+}
+
+.NFTDetailsImage_box_nft_like span {
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+
+}
+
+.NFTDetailsImage_box_nft_like_icon{
+    color: #fff;
+    font-size: 1.6rem;
+    /* background-color: rgba(0,0,0,.5); */
+    padding: 0.3rem 0.8rem;
+    /* border-radius: 1rem; */
+    cursor: pointer;
+
+}
+
+.NFTDetailsImage_box_nft_like_icon_icon{
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+
+.NFTDetailsImage_box_nft_img_img{
+    border-radius: 2rem;
+}
+
+
+
+.NFTDetailsImage_box_details , 
+.NFTDetailsImage_box_description{
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 1rem;
+    padding-inline: 1rem;
+    flex-direction: column;
+    margin-top: 3rem ;
+
+}
+
+
+.NFTDetailsImage_box_details h2 , 
+.NFTDetailsImage_box_description h2{
+    background-color: var(--icons-bg-color);
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+
+
+.NFTDetailsImage_box_details p , 
+.NFTDetailsImage_box_description p{
+    font-size: 1rem;
+    padding: 1rem  0 0.6rem 1.4rem;
+    font-weight: 600;
+}
+
+.NFTDetailsImage_box_details div div p {
+    font-weight: 600;
+} 
+
+.NFTDetailsImage_box_details div div   h6{
+    padding:0 2.2rem;
+    font-weight: 800;
+    font-size: 1.1rem;
+}

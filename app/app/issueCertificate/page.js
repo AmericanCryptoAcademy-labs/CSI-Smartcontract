@@ -3,19 +3,21 @@ import React, { useState, useRef } from 'react';
 import { NFTStorage, File } from 'nft.storage'
 import { address , abi } from "../../constant"
 import { ethers } from 'ethers';
-import Style from "./issueCertificate.module.css"
+import Style from "./issueCertificate.module.css";
 import {
   FormControl,
   FormLabel,
-  Center,
   Stack,
   VStack,
   Heading,
   Card,
   CardBody,
-  Button
+  Button,
+  Input,
+  Box,
+  Center,
+  Text
 } from '@chakra-ui/react'
-import { Box, Input } from '@chakra-ui/react';
 import {
   Alert,
   AlertIcon,
@@ -45,7 +47,8 @@ const IssueCertificate = () => {
   const [institute , setinstitute] = useState("")
   // defining  useRef for all inputes
   const fileRef = useRef(null);
-  const instituteRef = useRef(null)
+  const instituteRef = useRef(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // upload image function
   const uploadImage = async (imageData) => {
@@ -107,7 +110,8 @@ const IssueCertificate = () => {
       console.log(name, remarks, validity,useraddress ,fileRef);
 
       if(name == "" || remarks == "" || validity == "" || useraddress == "" , files == undefined){
-        alert("Please Fill All The Details")       
+        // alert("Please Fill All The Details")  ;
+        setIsModalOpen(true)     
       }else{
         console.log(images.cert1);
       const ipnft = await uploadImage(files);
@@ -269,6 +273,8 @@ const IssueCertificate = () => {
               </CardBody>
             </Card>
           </VStack>
+
+          <MyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </Center>
       </Box>
     </div>
@@ -277,3 +283,44 @@ const IssueCertificate = () => {
   );
 }
 export default IssueCertificate;
+
+
+
+const MyModal = ({isOpen, onClose}) => {
+  const handleModalClick = (e) => {
+    e.stopPropagation();
+  };
+
+  return (
+    <>
+      {isOpen && (
+        <Box
+          position="fixed"
+          top="0"
+          left="0"
+          right="0"
+        
+          bottom="0"
+          background="rgba(0, 0, 0, 0.8)"
+          display="flex"
+          alignItems="center"
+          flexDirection={"column"}
+          style={{ flexDirection: "column" }}
+          justifyContent="center"
+          zIndex="1000"
+          onClick={onClose}
+        >
+          <VStack background="white"
+            borderRadius="4px"
+            border={"2px solid red"}
+            padding={"4rem 6rem"}
+            boxShadow="0 4px 8px rgba(0, 0, 0, 0.1)"
+            onClick={handleModalClick}>
+            <Text style={{ fontSize: '1.2rem', fontWeight: '700' , color:"red" }}>Please Fill All  The  Fields</Text>
+            
+          </VStack>
+        </Box>
+      )}
+    </>
+  );
+};

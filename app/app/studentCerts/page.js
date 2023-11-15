@@ -88,7 +88,7 @@ export const StudentCerts = () => {
                   return (
                     <>   
                       {items.tokenURI && (
-                        <div style={{border:'4px solid #333'}} className="col-span-1 w-72 rounded-2xl border-2 pt-2  hover:shadow-lg hover:shadow-black transition ease-in-out delay-150 shadow-black"  >
+                        <div style={{border:"2px solid #4c5773"}} className="col-span-1 w-72 rounded-2xl border-2 pt-2  hover:shadow-lg hover:shadow-black transition ease-in-out delay-150"  >
                           <NFTTile tokenURI={items.tokenURI} proposalid={items.id.toString() } validdate={items.validTill.toString()} />
                         </div>
                       )}

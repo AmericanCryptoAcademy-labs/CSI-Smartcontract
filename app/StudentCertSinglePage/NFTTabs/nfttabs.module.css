@@ -1,0 +1,33 @@
+
+
+.NFTTabs{
+}
+
+.NFTTabs_box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0 ;
+}
+
+.NFTTabs_box_img{
+    border-radius: 50%;
+
+}
+
+.NFTTabs_box_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.NFTTabs_box_info p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--icons-color);
+}
+
+.NFTTabs_box_info p span{
+    font-weight: 700;
+}
