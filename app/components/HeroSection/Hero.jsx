@@ -22,7 +22,7 @@ const Hero = () => {
         </div>
 
       <div className={Style.HEROSECTION_BOX_RIGHT}>
-          <Image src={images.hero} alt='Hero Section Image' width={600} height={600} />
+          <Image  format="webp" src={images.hero} alt='Hero Section Image' width={600} height={600} />
 
       </div>
 

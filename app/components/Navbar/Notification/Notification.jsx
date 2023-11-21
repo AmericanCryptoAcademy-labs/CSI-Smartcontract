@@ -25,7 +25,7 @@ const Notification = () => {
 
         <div className={Style.NOTIFICATION_BOX_INFO}>
           <h4>Madhav Gupta</h4>
-          <p>Mention action of  user...</p>
+          <p>ACA Issue Cert #52 to you</p>
           <small>3 minutes ago..</small>
         </div>
 

@@ -19,7 +19,7 @@ const Category = () => {
 {
     CategoryArray.map((element , index) => (
         <div key={index + 1} className={Style.CATEGORY_BOX}>
-            <Image src={images.creatorbackground1} className={Style.CATEGORY_BOX_IMAGE} alt='catepgry image'
+            <Image  format="webp" src={images.creatorbackground1} className={Style.CATEGORY_BOX_IMAGE} alt='catepgry image'
                 width={350} height={150} objectFit="cover"
             />
 

@@ -116,15 +116,15 @@ contract CSIContract is ERC721 , ERC721URIStorage ,Ownable , ReentrancyGuard{
     // adding  teachers to mapping  
     function addTeacher(address _address) external onlyOwner {
 
-        require(isTeacher[_address], "Address is already a teacher");
+        require(isTeacher[_address] == false , "Address is already a teacher");
         isTeacher[_address] = true;
-        teachersArray.push(msg.sender);
+        teachersArray.push(_address);
     }
 
     // removing teacher from mapping
     function removeTeacher(address _address)   external  onlyOwner{
 
-        require(!isTeacher[_address], "Address is not a teacher");
+        require(isTeacher[_address] == true, "Address is not a teacher");
 
         isTeacher[_address] = false;
         

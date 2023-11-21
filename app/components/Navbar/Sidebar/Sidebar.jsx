@@ -41,10 +41,6 @@ const Sidebar = ({setOpenSideMenu}) => {
     {
       name:"Connect Wallet",
       link:'connect-wallet'
-    },
-    {
-      name:"Blog",
-      link:'blog'
     }
   ]
 
@@ -64,10 +60,6 @@ const Sidebar = ({setOpenSideMenu}) => {
     {
       name : "Sign In",
       link : 'signin'
-    },
-    {
-      name : "Subscription",
-      link : 'subscription'
     }
   ]
 

@@ -289,7 +289,7 @@ const Admin = () => {
               {
                 teachersArray.map((el,i) => (
                   <div key={i+1} className={Style.ADMIN_box_Display_Teacher_Item} >
-                    <p>{el}</p>
+                    <p>{el} </p>
 
                   </div>
                 ))

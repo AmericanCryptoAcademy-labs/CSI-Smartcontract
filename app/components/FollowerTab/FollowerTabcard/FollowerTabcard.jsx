@@ -30,7 +30,7 @@ const FollowerTabcard = ({index , el}) => {
 
        <div className={Style.FollowerTabcard_box}>
         <div className={Style.FollowerTabcard_box_img}>
-            <Image src={images.creatorbackground1} alt='profile' width={500} height={300}
+            <Image   format="webp"  src={images.creatorbackground1} alt='profile' width={500} height={300}
             className={Style.FollowerTabcard_box_img_img}
             objectFit='cover'
             />
@@ -38,7 +38,7 @@ const FollowerTabcard = ({index , el}) => {
         </div>
 
         <div className={Style.FollowerTabcard_box_profile}>
-            <Image src={el} width={70} height={70}   alt="profile pic" className={Style.FollowerTabcard_box_profile_img} />
+            <Image  format="webp" src={el} width={70} height={70}   alt="profile pic" className={Style.FollowerTabcard_box_profile_img} />
 
         </div>
 
@@ -61,7 +61,6 @@ const FollowerTabcard = ({index , el}) => {
                 ) }
 
             </div>
-
         </div>
 
        </div>

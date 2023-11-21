@@ -18,19 +18,20 @@ const Day = () => {
             width={500}
             height={300}
             objectFit='cover'
+            format="webp"
           />
 
         </div>
 
         <div className={Style.Day_box_profile}>
-          <Image src={images.creatorbackground2} alt='profile' width={200} 
+          <Image   format="webp" src={images.creatorbackground2} alt='profile' width={200} 
           height={200} 
           className={Style.Day_box_img_img1}  objectFit='cover' />
 
-          <Image src={images.creatorbackground2} alt='profile' width={200} height={200} 
+          <Image   format="webp"  src={images.creatorbackground2} alt='profile' width={200} height={200} 
           className={Style.Day_box_img_img2}  objectFit='cover' />
 
-          <Image src={images.creatorbackground2} alt='profile' width={200} height={200} 
+          <Image  format="webp"  src={images.creatorbackground2} alt='profile' width={200} height={200} 
           className={Style.Day_box_img_img3}  objectFit='cover' />
 
         </div>
@@ -40,7 +41,7 @@ const Day = () => {
           <h2>Amazing Collection</h2>
           <div className={Style.Day_box_title_info}>
             <div className={Style.Day_box_title_info_profile}>
-              <Image  className={Style.Day_box_title_info_profile_img} src={images.user1} width={30}  height={30} objectFit='cover' />
+              <Image  format="webp"  className={Style.Day_box_title_info_profile_img} src={images.user1} width={30}  height={30} objectFit='cover' />
               <p>
                 <span>
                   Madhav Gupta

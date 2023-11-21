@@ -25,10 +25,6 @@ const HelpCenter = () => {
     {
       name : "Sign In",
       link : 'signin'
-    },
-    {
-      name : "Subscription",
-      link : 'subscription'
     }
   ]
 

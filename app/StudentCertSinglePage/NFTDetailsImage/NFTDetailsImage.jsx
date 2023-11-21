@@ -50,25 +50,7 @@ const NFTDetailsImage = ({tokenURI ,tokenId , image , remark}) => {
     <div className={Style.NFTDetailsImage} >
       <div className={Style.NFTDetailsImage_box} >
         <div className={Style.NFTDetailsImage_box_nft} >
-          <div className={Style.NFTDetailsImage_box_nft_like}>
-            {/* <BsImage className={Style.NFTDetailsImage_box_nft_like_icon} />
-            <p onClick={() => likeNFT()} >
-              {like ? (
-              <>
-                <AiOutlineHeart className={Style.NFTDetailsImage_box_nft_like_icon_icon} />  
-                <span>{likecount}</span>
-              </>
-            ) : 
-              (
-                <>
-                <AiFillHeart className={Style.NFTDetailsImage_box_nft_like_icon_icon} /> 
-                <span>{likecount}</span>
-                </>
-                
-              )
-              }
-            </p> */}
-               
+          <div className={Style.NFTDetailsImage_box_nft_like}>            
           </div>
 
           <div className={Style.NFTDetailsImage_box_nft_img} >

@@ -23,7 +23,7 @@ const Footer = () => {
 
       <div className={Style.FOOTER_BOX}>
         <div className={Style.FOOTER_BOX_SOCIAL}>
-          <Image src={images.logo} alt='Footer Logo' height={100} width={100} />
+          <Image  format="webp" src={images.logo} alt='Footer Logo' height={100} width={100} />
 
           <p>The World's First and Largest digital marketplace for collectibiles and non-fungible 
             tokens (NFTs). But and Sell exclusive digital items.

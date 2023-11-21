@@ -33,11 +33,11 @@ export default function Home() {
     <ChakraProvider>
       <Navbar/>
       <Hero/>
-      <Service/>
-      <NFTSlider/>
+      {/* <Service/> */}
+      {/* <NFTSlider/> */}
       {/* <Title heading="Latest Audio Collection" paragraph={"Discover the most outstanding NFTs in all topics of life"} /> */}
       {/* <Audiolive/> */}
-      <Title heading="New Collection" paragraph={"Discover the most outstanding NFTs in all topics of life"} />
+      {/* <Title heading="New Collection" paragraph={"Discover the most outstanding NFTs in all topics of life"} />
       <FollowerTab/>
       <Title heading="Explore NFT Videos" paragraph={"Discover the most outstanding NFTs in all topics of life"} />
       <Slider/>
@@ -48,7 +48,7 @@ export default function Home() {
      
       <Title heading="Browse by Category" paragraph={"Explore the NFTs in the most featured categories"} />
       <Category/>
-      <Subscribe/>
+      <Subscribe/> */}
       <Footer/>
       
     </ChakraProvider>

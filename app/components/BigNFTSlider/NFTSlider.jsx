@@ -116,7 +116,7 @@ const NFTSlider = () => {
 
             <div className={Style.SLIDER_BOX_LEFT_CREATOR}>
                 <div className={Style.SLIDER_BOX_LEFT_CREATOR_PROFILE}>
-                    < Image className={Style.SLIDER_BOX_LEFT_CREATOR_PROFILE_USER_IMAGE} src={sliderData[idNumber].image} alt='Profile Image' width={50} height={50} />
+                    < Image  format="webp" className={Style.SLIDER_BOX_LEFT_CREATOR_PROFILE_USER_IMAGE} src={sliderData[idNumber].image} alt='Profile Image' width={50} height={50} />
                     <div className={Style.SLIDER_BOX_LEFT_CREATOR_PROFILE_INFO}>
                         <h4>{sliderData[idNumber].name}{""}</h4>
                         <span>
@@ -191,7 +191,7 @@ const NFTSlider = () => {
             <div className={Style.SLIDER_BOX_RIGHT}>
 
                 <div className={Style.SLIDER_BOX_RIGHT_BOX}>
-                    <Image src={sliderData[idNumber].nftImage} alt='NFT Image' className={Style.RIGHT_BOX_IMAGE} />
+                    <Image format="webp" src={sliderData[idNumber].nftImage} alt='NFT Image' className={Style.RIGHT_BOX_IMAGE} />
                     <div className={Style.SLIDER_BOX_RIGHT_BOX_LIKE}>
                         <AiFillHeart />
                         <span>{sliderData[idNumber].like}</span>

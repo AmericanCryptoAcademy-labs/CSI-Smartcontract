@@ -24,6 +24,7 @@ const CollectionProfile = () => {
                 width={800} 
                 height={800}  
                 className={Style.CollectionProfile_box_left_img}
+                format="webp"
                 />
 
             <div className={Style.CollectionProfile_box_left_soical}>

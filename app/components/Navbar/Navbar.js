@@ -137,7 +137,7 @@ const Navbar = () => {
             
 
             {/* HELPCENTER */}
-            <div className={Style.NAVBAR_CONTAINER_RIGHT_HELPCENTER}>
+            {/* <div className={Style.NAVBAR_CONTAINER_RIGHT_HELPCENTER}>
 
                 <p onClick={(e) => openHelpCenter(e)}>Help Center</p>
                 {help && (
@@ -145,8 +145,8 @@ const Navbar = () => {
                         <HelpCenter/>
                     </div>
                 )}
-            </div>
-             {/* HELPCENTER END */}
+            </div> */}
+             {/* HELPCENTER END
 
 
             {/* NOTIFICATION */}
@@ -171,7 +171,7 @@ const Navbar = () => {
              <div className={Style.NAVBAR_CONTAINER_RIGHT_PROFILE}>
 
                 <div className={Style.NAVBAR_CONTAINER_RIGHT_PROFILE_BOX}>
-                    <Image className={Style.NAVBAR_CONTAINER_RIGHT_PROFILE_ICON} src={images.user1} alt='Profile' width={40} height={40} onClick={() => openProfile()} />
+                    <Image className={Style.NAVBAR_CONTAINER_RIGHT_PROFILE_ICON}   format="webp"  src={images.user1} alt='Profile' width={40} height={40} onClick={() => openProfile()} />
 
                     {profile && <Profile/>}
                 </div>

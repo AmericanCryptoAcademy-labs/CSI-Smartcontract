@@ -13,10 +13,7 @@ import { TbDownloadOff , TbDownload} from 'react-icons/tb';
 //  INTERNAL IMAGES IMPORT 
 import images from "../../../img";
 
-
-
 import Style from "./profile.module.css"
-// import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { ConnectWallet } from "@thirdweb-dev/react";
 import {
   ThirdwebProvider,
@@ -39,6 +36,7 @@ const Profile = () => {
         alt='User Image'
         width={40}
         height={40}
+        format="webp"
         className={Style.PROFILE_ACCOUNT_IMAGE}
         
         /> 
@@ -64,27 +62,11 @@ const Profile = () => {
             <Link href={{pathname:`/issueCertificate`}} >Issue Certificate</Link>
           </p>
         </div>
-
-        <div    className={Style.PROFILE_MENU_ONE_ITEM}>
-          <FaRegImage/>
-          <p>
-            <Link href={{pathname:`/my-items`}} >My Items</Link>
-          </p>
         </div>
 
-        <div    className={Style.PROFILE_MENU_ONE_ITEM}>
-          <FaUserEdit/>
-          <p>
-            <Link href={{pathname:`/edit-profile`}} >Edit Profile</Link>
-          </p>
-        </div>
-
-        </div>
-
-
-        <div className={Style.PROFILE_MENU_TWO}>
-          <div className={Style.PROFILE_MENU_ONE_ITEM}>
-            <MdHelpCenter/>
+         <div className={Style.PROFILE_MENU_TWO}> 
+           <div className={Style.PROFILE_MENU_ONE_ITEM}> 
+             <MdHelpCenter/>
             <p>
               <Link href={{pathname:'/help'}}>Help</Link>
             </p>

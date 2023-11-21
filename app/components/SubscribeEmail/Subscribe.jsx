@@ -35,7 +35,7 @@ const Subscribe = () => {
             </div>
 
             <div className={Style.SUBSCRIBE_BOX_RIGHT}>
-                <Image src={images.update} alt='Image Update' width={600} height={500} />
+                <Image  format="webp" src={images.update} alt='Image Update' width={600} height={500} />
 
             </div>
 

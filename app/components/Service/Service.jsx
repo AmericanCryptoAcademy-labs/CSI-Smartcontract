@@ -12,7 +12,7 @@ const Service = () => {
         <div className={Style.SERVICE_BOX}>
 
         <div className={Style.SERVICE_BOX_ITEM}>
-                <Image src={images.service1} alt='Filter & Discover' width={100} height={100} />
+                <Image  format="webp" src={images.service1} alt='Filter & Discover' width={100} height={100} />
                 <p>
                     <span>Step 1</span>
                 </p>               
@@ -21,7 +21,7 @@ const Service = () => {
         </div>
 
         <div className={Style.SERVICE_BOX_ITEM}>
-                <Image src={images.service2} alt='Connect Wallet' width={100} height={100} />
+                <Image  format="webp" src={images.service2} alt='Connect Wallet' width={100} height={100} />
                 <p>
                     <span>Step 2</span>
                 </p>               
@@ -30,7 +30,7 @@ const Service = () => {
         </div>
 
         <div className={Style.SERVICE_BOX_ITEM}>
-                    <Image src={images.service3} alt='Filter & Discover' width={100} height={100} />
+                    <Image  format="webp" src={images.service3} alt='Filter & Discover' width={100} height={100} />
                 <p>
                     <span>Step 3</span>
                 </p>               
@@ -39,7 +39,7 @@ const Service = () => {
         </div>
 
         <div className={Style.SERVICE_BOX_ITEM}>
-                <Image src={images.service4} alt='AI Generated NFTs' width={100} height={100} />
+                <Image  format="webp" src={images.service4} alt='AI Generated NFTs' width={100} height={100} />
                 <p>
                     <span>Step 4</span>
                 </p>               
