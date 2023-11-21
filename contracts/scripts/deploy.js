@@ -4,7 +4,7 @@ const hre = require("hardhat");
 async function main() {
   const EasyCerts = await hre.ethers.deployContract("CSIContract");
 
-  await EasyCerts.waitForDeployment(); //0x32999F8862941f9707e661343B371fE5ddbad555
+  await EasyCerts.waitForDeployment(); //0x68f09b03e151d4E83fCa109e0693de65D60Dff09
 
   console.log('Easy Certs Deployed at ', EasyCerts.target)
 }

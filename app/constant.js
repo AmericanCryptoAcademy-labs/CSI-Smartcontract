@@ -1,4 +1,4 @@
-export const address = "0x020Ede0CF09934078fd36105B470D26f16A2368A"
+export const address = '0xB35702c296D92Da3ADf820745A91C7f733F85972';
 
 
 export const abi =  [
@@ -374,6 +374,19 @@ export const abi =  [
         "internalType": "struct CSIContract.Certificate[]",
         "name": "",
         "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "fetchAllTeachers",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
       }
     ],
     "stateMutability": "view",
@@ -869,6 +882,25 @@ export const abi =  [
         "internalType": "string",
         "name": "",
         "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "teachersArray",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
       }
     ],
     "stateMutability": "view",

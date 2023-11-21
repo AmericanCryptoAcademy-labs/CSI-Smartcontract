@@ -17,6 +17,7 @@ contract CSIContract is ERC721 , ERC721URIStorage ,Ownable , ReentrancyGuard{
 
     constructor() ERC721("Certificate Standards Institute", "CSI") {
         isTeacher[msg.sender] = true;
+        teachersArray.push(msg.sender);
     }
 
 
@@ -38,6 +39,7 @@ contract CSIContract is ERC721 , ERC721URIStorage ,Ownable , ReentrancyGuard{
 
     // Mappings
     mapping(address => bool) public isTeacher;
+    address[] public teachersArray;
     mapping(bytes32 => bool ) public isHashed;
     mapping(uint256 => Certificate) public idToCertificate;
     mapping(address => uint256[]) public addressToid;
@@ -113,12 +115,26 @@ contract CSIContract is ERC721 , ERC721URIStorage ,Ownable , ReentrancyGuard{
 
     // adding  teachers to mapping  
     function addTeacher(address _address) external onlyOwner {
+
+        require(isTeacher[_address], "Address is already a teacher");
         isTeacher[_address] = true;
+        teachersArray.push(msg.sender);
     }
 
     // removing teacher from mapping
     function removeTeacher(address _address)   external  onlyOwner{
+
+        require(!isTeacher[_address], "Address is not a teacher");
+
         isTeacher[_address] = false;
+        
+        for(uint256 i  = 0 ; i < teachersArray.length ; i++){
+            if(teachersArray[i] == _address){
+                    teachersArray[i] = teachersArray[teachersArray.length - 1];
+                    teachersArray.pop();
+                    break;
+            }
+        }
     }
 
     // updating the ceritificate Validity 
@@ -217,6 +233,13 @@ contract CSIContract is ERC721 , ERC721URIStorage ,Ownable , ReentrancyGuard{
         }
         return nfts;
     }
+
+
+    // Fetch all teacher addresses
+    function fetchAllTeachers() public view returns (address[] memory) {
+        return teachersArray;
+    }
+
   
 
     function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
