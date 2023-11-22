@@ -56,7 +56,7 @@ const Footer = () => {
 
       {/* DISCOVER COMPONENT */}
         <div className={Style.FOOTER_BOX_DISCOVER_MENU}>
-          <h>Discover</h>
+          <h>Discover CSI</h>
           <Discover/>
         </div>
 
