@@ -25,8 +25,7 @@ const Footer = () => {
         <div className={Style.FOOTER_BOX_SOCIAL}>
           <Image  format="webp" src={images.logo} alt='Footer Logo' height={100} width={100} />
 
-          <p>The World's First and Largest digital marketplace for collectibiles and non-fungible 
-            tokens (NFTs). But and Sell exclusive digital items.
+          <p>The worlds utility layer for certification and credentialing. Access tools and services that meet your compliance and cost goals. 
           </p>
 
           <div className={Style.FOOTER_SOCIAL}>
@@ -77,8 +76,8 @@ const Footer = () => {
       </div>
 
       <div className={Style.SUBSCRIBE_BOX_INFO}>
-      The World's First and Largest digital marketplace for collectibiles and non-fungible 
-            tokens (NFTs). But and Sell exclusive digital items.
+      The worlds utility layer for certification and credentialing. Access tools and services that meet your compliance and cost goals. 
+    
       </div>
       </div>
 
